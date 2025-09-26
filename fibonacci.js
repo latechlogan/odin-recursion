@@ -18,8 +18,18 @@ function fibs(reps) {
   return fibsArray;
 }
 
-console.log(fibs(-2));
-console.log(fibs(0));
-console.log(fibs(1));
-console.log(fibs(8));
-console.log(fibs(20));
+// console.log(fibs(-2));
+// console.log(fibs(0));
+// console.log(fibs(1));
+// console.log(fibs(8));
+// console.log(fibs(20));
+
+function fibsRec(reps) {
+  if (reps <= 0) {
+    return [];
+  }
+
+  return [reps].concat(fibsRec(--reps));
+}
+
+console.log(fibsRec(4));
